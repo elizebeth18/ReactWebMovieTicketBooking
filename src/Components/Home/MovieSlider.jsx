@@ -63,13 +63,6 @@ const MovieSlider = () => {
 
     useEffect(() => {
         dispatch(fetchMoviesList());
-        /* axios.get('http://localhost:9112/movies')
-            .then((response) => {
-                setMoviesList(response.data);
-            })
-            .catch((err) => {
-                console.error(err)
-            }) */
     }, []);
 
     return (
