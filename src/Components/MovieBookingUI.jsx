@@ -1,25 +1,23 @@
 import React from 'react';
 import { AppBar, Toolbar, Tabs, Tab, TextField, IconButton, Grid, Card, CardContent, Button, Typography, Box } from '@mui/material';
 import NavBar from './Home/NavBar';
+import MovieSlider from './Home/MovieSlider';
 
 export default function MovieBookingUI() {
     return (
         <Box sx={{ width: '100vw' }}>
+
             <NavBar />
 
-            
-            <Tabs  >
+
+            <Tabs centered>
                 <Tab label="Latest Movies" sx={{ border: '1px solid black', width: '33.33%' }} />
                 <Tab label="Upcoming Movies" sx={{ border: '1px solid black', width: '33.33%', margin: '0 5px' }} />
                 <Tab label="Nearby Events" sx={{ width: '33.33%', border: '1px solid black' }} />
             </Tabs>
 
-            {/* 🔄 Image Slider (placeholder) */}
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: 200, border: '1px solid lightgray', m: 2 }}>
-                <Button>{'<'}</Button>
-                <Typography variant="h6">Movies Image Slider</Typography>
-                <Button>{'>'}</Button>
-            </Box>
+            
+            <MovieSlider />
 
             {/* 🎥 Recommended Movies */}
             <Box sx={{ textAlign: 'center', mt: 4 }}>
