@@ -4,6 +4,8 @@ import Slider from 'react-slick';
 import { Box, Typography, Card, CardMedia, CardContent } from '@mui/material'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { selectMoviesList, fetchMoviesList } from '../../store/movieSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
 const movies = [
     {
@@ -30,6 +32,8 @@ const movies = [
 
 const MovieSlider = () => {
     const [moviesList, setMoviesList] = useState([]);
+    const dispatch = useDispatch();
+    const moviesFromStore = useSelector(selectMoviesList);
     const settings = {
         dots: true,
         infinite: true,
@@ -54,13 +58,18 @@ const MovieSlider = () => {
     };
 
     useEffect(() => {
-        axios.get('http://localhost:9112/movies')
+       moviesFromStore ? setMoviesList(moviesFromStore): dispatch(fetchMoviesList);
+    }, [moviesFromStore])
+
+    useEffect(() => {
+        dispatch(fetchMoviesList());
+        /* axios.get('http://localhost:9112/movies')
             .then((response) => {
                 setMoviesList(response.data);
             })
             .catch((err) => {
                 console.error(err)
-            })
+            }) */
     }, []);
 
     return (
