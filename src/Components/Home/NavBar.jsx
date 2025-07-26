@@ -5,9 +5,9 @@ import SearchIcon from '@mui/icons-material/Search';
 const NavBar = () => {
     return (
         <>
-            <AppBar position="static" color="default">
+            <AppBar position="static" sx={{backgroundColor:'steelblue'}}>
                 <Toolbar>
-                    <Typography variant="h6" >
+                    <Typography variant="h6" color='white' >
                         Movie Booking App
                     </Typography>
                     <Box sx={{ flexGrow: 1 }} />
