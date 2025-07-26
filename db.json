@@ -1,21 +1,21 @@
 {
     "movies": [
         {
-            "id": 1,
-            "title": "Thor: Ragnarok",
-            "image": "https://image.tmdb.org/t/p/w500/zB4G3D0WcaaXOrX1D8oWnBCXxvH.jpg",
-            "genre": "Action, Adventure, Comedy",
+            "id": 104,
+            "title": "Despicable Me 4",
+            "genre": "Animation, Adventure, Comedy",
+            "releaseDate": "2025-07-03",
             "language": "English",
-            "duration": "2h 10m",
-            "releaseDate": "2017-11-03",
-            "director": "Taika Waititi",
-            "stars": "Chris Hemsworth, Tom Hiddleston, Cate Blanchett, Mark Ruffalo",
-            "plot": "Thor must escape the planet Sakaar in time to save Asgard from Hela and the impending Ragnarok.",
-            "currency": "THB",
+            "duration": "1h 35m",
+            "director": "Chris Renaud",
+            "stars": "Steve Carell, Kristen Wiig, Will Ferrell, Sofia Vergara",
+            "plot": "Gru, Lucy, and their girls welcome a new family member while facing off against a charming but villainous Maxime Le Mal and his femme fatale girlfriend Valentina.",
+            "image": "../../src/assets/img/1.jpg",
+            "currency": "INR",
             "prices": {
-                "normal": 200,
-                "superior": 300,
-                "sofa": 600
+                "normal": 180,
+                "premium": 300,
+                "sofa": 550
             },
             "showtimes": [
                 "12:00",
@@ -133,6 +133,60 @@
             "currency": "THB",
             "userId": "he6fe54u4s56o71d36z51no",
             "id": 3
+        }
+    ],
+    "events": [
+        {
+            "id": 1,
+            "title": "React Native Workshop",
+            "description": "A hands-on workshop to learn the basics of React Native.",
+            "date": "2025-08-10",
+            "time": "10:00 AM",
+            "location": "Tech Park, Bengaluru",
+            "category": "Workshop",
+            "image": "https://images.unsplash.com/photo-1581093588401-31cbbf2e3c93",
+            "organizer": "CodeCamp",
+            "price": 499,
+            "currency": "INR"
+        },
+        {
+            "id": 2,
+            "title": "Open Mic Night",
+            "description": "Join us for a night of music, comedy, and poetry.",
+            "date": "2025-08-15",
+            "time": "7:00 PM",
+            "location": "Café Mocha, Mumbai",
+            "category": "Entertainment",
+            "image": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f",
+            "organizer": "The Stage Co.",
+            "price": 199,
+            "currency": "INR"
+        },
+        {
+            "id": 3,
+            "title": "Startup Meetup",
+            "description": "Network with founders, investors, and mentors from the tech scene.",
+            "date": "2025-08-20",
+            "time": "4:00 PM",
+            "location": "T-Hub, Hyderabad",
+            "category": "Networking",
+            "image": "https://images.unsplash.com/photo-1551836022-4c4c79ecde52",
+            "organizer": "Startup India",
+            "price": 0,
+            "currency": "INR"
+        },
+        {
+            "id": 4,
+            "title": "Online Yoga Session",
+            "description": "Relax and unwind with a certified yoga instructor.",
+            "date": "2025-08-05",
+            "time": "6:30 AM",
+            "location": "Zoom",
+            "category": "Health & Wellness",
+            "image": "https://images.unsplash.com/photo-1554344058-7e0b2f0fc44e",
+            "organizer": "Wellness Club",
+            "price": 99,
+            "currency": "INR"
         }
     ]
 }
