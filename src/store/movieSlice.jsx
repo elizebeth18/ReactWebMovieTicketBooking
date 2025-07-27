@@ -7,6 +7,8 @@ const initialState = {
     error: null
 };
 
+export const base_url = import.meta.env.VITE_API_URL;
+
 export const fetchMoviesList = createAsyncThunk('movie/fetch', async (_, { signal }) => {
 
     //'_' in the async function means ignore if no payload to pass
@@ -17,7 +19,7 @@ export const fetchMoviesList = createAsyncThunk('movie/fetch', async (_, { signa
         controller.abort(); //will cancel the axios request
     });
 
-    const response = await axios.get('http://localhost:9112/movies', {
+    const response = await axios.get(`${base_url}/movies`, {
         signal: controller.signal
     });
     

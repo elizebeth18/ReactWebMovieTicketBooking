@@ -5,7 +5,9 @@ const initialState = {
     events: [],
     isLoading: false,
     error: null
-}
+};
+
+export const base_url = import.meta.env.VITE_API_URL;
 
 export const fetchEvents = createAsyncThunk('eventSlice/fetch', async (_, { signal }) => {
     
@@ -16,7 +18,7 @@ export const fetchEvents = createAsyncThunk('eventSlice/fetch', async (_, { sign
     signal.addEventListener('abort',() => {
         controller.abort();
     })
-    const response = await axios.get('http://localhost:9112/events',{
+    const response = await axios.get(`${base_url}/events`,{
         signal: controller.signal
     });
 
