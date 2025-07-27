@@ -1,12 +1,12 @@
-import MovieBookingUI from './Components/MovieBookingUI';
+import Routing from './Components/Routing';
 
 function App() {
 
   return (
     <>
-      <MovieBookingUI />
+      <Routing />
     </>
   )
 }
 
-export default App
+export default App;
