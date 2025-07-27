@@ -6,6 +6,7 @@ import MovieSlider from './Home/MovieSlider';
 import { fetchMoviesList, selectMoviesList } from '../store/movieSlice';
 import RecommendedMovies from './Recommended Movies';
 import Events from './Events';
+import FinalBooking from './FinalBooking';
 
 export default function MovieBookingUI() {
 
@@ -45,6 +46,8 @@ export default function MovieBookingUI() {
                 <RecommendedMovies moviesList={moviesList} />
 
                 <Events />
+
+                <FinalBooking />
 
             </Box>
         </>
