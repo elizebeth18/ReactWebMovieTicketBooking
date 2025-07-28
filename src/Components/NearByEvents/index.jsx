@@ -24,13 +24,14 @@ const Events = () => {
                 <Typography sx={{ m: 1 }} variant='h5' align='center'>
                     NearBy Events
                 </Typography>
-                <Grid container justifyContent={'space-between'}>
+                <Grid container justifyContent='space-around' alignItems='center'>
                     {eventsList.map((events) => {
                         return (
                             <Grid key={Math.random(1)} xs={10} sm={6} md={1}>
                                 <Card sx={{ p: 1, maxWidth: 345 }}>
                                     <CardActionArea>
-                                        <CardMedia alt={events.title} component="img"
+                                        <CardMedia alt={events.title}
+                                            height="194" component="img"
                                             image={events.image} />
                                         <CardContent>
                                             <Typography variant='h5'>{events.title}</Typography>

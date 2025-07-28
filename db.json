@@ -144,7 +144,7 @@
             "time": "10:00 AM",
             "location": "Tech Park, Bengaluru",
             "category": "Workshop",
-            "image": "https://images.unsplash.com/photo-1581093588401-31cbbf2e3c93",
+            "image": "../../src/assets/img/react-native.jpg",
             "organizer": "CodeCamp",
             "price": 499,
             "currency": "INR"
@@ -170,7 +170,7 @@
             "time": "4:00 PM",
             "location": "T-Hub, Hyderabad",
             "category": "Networking",
-            "image": "https://images.unsplash.com/photo-1551836022-4c4c79ecde52",
+            "image": "../../src/assets/img/startup-meet.jpg",
             "organizer": "Startup India",
             "price": 0,
             "currency": "INR"
@@ -183,7 +183,7 @@
             "time": "6:30 AM",
             "location": "Zoom",
             "category": "Health & Wellness",
-            "image": "https://images.unsplash.com/photo-1554344058-7e0b2f0fc44e",
+            "image": "../../src/assets/img/yoga.jpg",
             "organizer": "Wellness Club",
             "price": 99,
             "currency": "INR"
