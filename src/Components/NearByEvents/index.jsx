@@ -1,6 +1,7 @@
-import { Box, Typography, Card, Grid, CardActionArea, CardMedia, CardContent } from '@mui/material';
+import { Box, Button, Typography, Card, Grid, CardActionArea, CardMedia, CardContent } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { fetchEvents, selectEventsList } from '../../store/eventSlice';
 
 const Events = () => {
@@ -8,7 +9,7 @@ const Events = () => {
     const dispatch = useDispatch();
     const eventsFromStore = useSelector(selectEventsList);
     const [eventsList, setEventsList] = useState([]);
-
+    const navigate = useNavigate();
 
     useEffect(() => {
         dispatch(fetchEvents());
@@ -18,12 +19,20 @@ const Events = () => {
         eventsFromStore ? setEventsList(eventsFromStore) : dispatch(fetchEvents());
     }, [eventsFromStore]);
 
+    const handleClick = () => {
+        navigate('/')
+    }
+
     return (
         <>
             <Box sx={{ mt: 3 }}>
-                <Typography sx={{ m: 1 }} variant='h5' align='center'>
-                    NearBy Events
-                </Typography>
+                <Grid container>
+                    <Typography sx={{ m: 1 }} variant='h5' align='center'>
+                        NearBy Events
+                    </Typography>
+                    <Box sx={{ flexGrow: 1 }} />
+                    <Button onClick={handleClick}>Back</Button>
+                </Grid>
                 <Grid container justifyContent='space-around' alignItems='center'>
                     {eventsList.map((events) => {
                         return (

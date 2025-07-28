@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Box } from '@mui/material';
-import NavBar from './Home/NavBar';
 import MovieSlider from './Home/MovieSlider';
 import { fetchMoviesList, selectMoviesList } from '../store/movieSlice';
 import RecommendedMovies from './Recommended Movies';
-import Events from './NearByEvents';
 import FinalBooking from './FinalBooking';
 import MovieTabs from './MovieTabs';
 
@@ -27,24 +24,14 @@ export default function MovieBookingUI() {
 
     useEffect(() => {
         moviesFromStore ? setMoviesList(moviesFromStore) : dispatch(fetchMoviesList())
-    }, [moviesFromStore]);
-
-
+    }, [dispatch, moviesFromStore]);
 
     return (
         <>
-            
-
-                
-
-                <MovieTabs />
-
-
-                <MovieSlider moviesList={moviesList} />
-
-                <RecommendedMovies moviesList={moviesList} />
-
-                <FinalBooking />
+            <MovieTabs />
+            <MovieSlider moviesList={moviesList} />
+            <RecommendedMovies moviesList={moviesList} />
+            <FinalBooking />
         </>
     );
 }
