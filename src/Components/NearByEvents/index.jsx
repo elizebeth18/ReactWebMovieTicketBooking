@@ -27,7 +27,7 @@ const Events = () => {
         <>
             <Box sx={{ mt: 3 }}>
                 <Grid container>
-                    <Typography sx={{ m: 1 }} variant='h5' align='center'>
+                    <Typography sx={{ m: 1,textAlign: 'center' }} variant='h5' align='center'>
                         NearBy Events
                     </Typography>
                     <Box sx={{ flexGrow: 1 }} />

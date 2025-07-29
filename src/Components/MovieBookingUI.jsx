@@ -31,7 +31,6 @@ export default function MovieBookingUI() {
             <MovieTabs />
             <MovieSlider moviesList={moviesList} />
             <RecommendedMovies moviesList={moviesList} />
-            <FinalBooking />
         </>
     );
 }
