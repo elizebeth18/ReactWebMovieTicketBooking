@@ -4,12 +4,23 @@ import { useNavigate } from 'react-router-dom';
 
 const MovieTabs = () => {
 
-    const [value, setValue] = useState(0);
+    const [value] = useState(0);
     const navigate = useNavigate();
 
     const handleChange = (e, newValue) => {
-        if(newValue === '3')
-        navigate('nearbyEvents');
+        
+        switch (newValue) {
+            case '1':
+            case '2':
+                navigate('latestMovies');
+                break;
+            case '3':
+                navigate('nearbyEvents');
+                break;
+
+            default:
+                break;
+        }
     }
 
     return (
