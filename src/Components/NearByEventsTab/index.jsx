@@ -25,13 +25,14 @@ const Events = () => {
 
     return (
         <>
-            <Box sx={{ mt: 3 }}>
+            <Box sx={{ m: 3 }}>
                 <Grid container>
+                    <Box flexGrow={1} />
                     <Typography sx={{ m: 1,textAlign: 'center' }} variant='h5' align='center'>
                         NearBy Events
                     </Typography>
                     <Box sx={{ flexGrow: 1 }} />
-                    <Button onClick={handleClick}>Back</Button>
+                    <Button variant='contained' onClick={handleClick}>Back</Button>
                 </Grid>
                 <Grid container justifyContent='space-around' alignItems='center'>
                     {eventsList.map((events) => {
