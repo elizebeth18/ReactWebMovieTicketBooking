@@ -12,7 +12,7 @@ const MovieTabs = () => {
         switch (newValue) {
             case '1':
             case '2':
-                navigate('latestMovies');
+                navigate('latestMovies?page=');
                 break;
             case '3':
                 navigate('nearbyEvents');

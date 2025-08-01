@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material'
 import NavBar from './Home/NavBar';
 import { Suspense, lazy } from 'react';
 import LatestMoviesTab from './LatestMoviesTab';
+import MovieDetails from './MovieDetails';
 
 const MainOutlet = lazy(() => import('./MainOutlet'))
 const MovieBookingUI = lazy(() => import('./MovieBookingUI'));
@@ -21,6 +22,7 @@ const Routing = () => {
                             <Route index element={<MovieBookingUI />} />
                             <Route path='nearbyEvents' element={<Events />} />
                             <Route path='latestMovies' element={<LatestMoviesTab />} />
+                            <Route path='movieDetails' element={<MovieDetails />} />
                         </Route>
                     </Routes>
                 </Suspense>

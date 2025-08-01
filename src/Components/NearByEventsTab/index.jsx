@@ -34,7 +34,7 @@ const Events = () => {
                     <Box sx={{ flexGrow: 1 }} />
                     <Button variant='contained' onClick={handleClick}>Back</Button>
                 </Grid>
-                <Grid container justifyContent='space-around' alignItems='center'>
+                <Grid container gap={2} justifyContent='space-around' alignItems='center'>
                     {eventsList.map((events) => {
                         return (
                             <Grid key={Math.random(1)} xs={10} sm={6} md={1}>

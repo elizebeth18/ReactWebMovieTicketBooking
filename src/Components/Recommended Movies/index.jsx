@@ -1,8 +1,13 @@
 import { Grid, Card, Button, Typography, Box } from '@mui/material';
-
+import { useNavigate } from 'react-router-dom';
 
 const RecommendedMovies = (props) => {
 
+    const navigate = useNavigate();
+
+    const handleNavigate = () => {
+        navigate('/movieDetails');
+    }
     return (
         <>
             <Box sx={{ mt: 5 }}>
@@ -12,7 +17,8 @@ const RecommendedMovies = (props) => {
                         <Grid key={Math.random(1)} xs={10} sm={6} md={3}>
                             <Card sx={{ p: 2, textAlign: "center" }}>
                                 <Typography variant="subtitle1">{movie.title}</Typography>
-                                <Button variant="outlined" sx={{ mt: 2 }}>Book</Button>
+                                <Button variant="outlined" sx={{ mt: 2 }}
+                                    onClick={handleNavigate}>Book</Button>
                             </Card>
                         </Grid>
                     ))}
