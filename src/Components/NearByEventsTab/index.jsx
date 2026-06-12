@@ -13,11 +13,11 @@ const Events = () => {
 
     useEffect(() => {
         dispatch(fetchEvents());
-    }, []);
+    }, [dispatch]);
 
     useEffect(() => {
         eventsFromStore ? setEventsList(eventsFromStore) : dispatch(fetchEvents());
-    }, [eventsFromStore]);
+    }, [eventsFromStore, dispatch]);
 
     const handleClick = () => {
         navigate('/')

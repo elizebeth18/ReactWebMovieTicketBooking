@@ -13,7 +13,7 @@ const Routing = () => {
 
     return (
         <BrowserRouter>
-            <Box sx={{ width: "100vw", bgcolor: "#eac6f3", overflow: 'hidden' }}>
+            <Box sx={{ width: "100vw", bgcolor: "#1a1a1a", overflow: 'hidden' }}>
                 <NavBar />
                 <Suspense fallback={<Box sx={{ width: '100vw' }}>
                     <Typography variant='h2' sx={{ m: 2, p: 2 }}>Loading...</Typography></Box>}>

@@ -1,10 +1,14 @@
 import { useState, useEffect } from 'react';
-import { Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 const MovieDetails = () => {
     return (
         <>
-            <Typography>Movie Details</Typography>
+            <Box sx={{m:1}}>
+                <Box>
+                    <Typography>Movie Details</Typography>
+                </Box>
+            </Box>
         </>
     )
 }
